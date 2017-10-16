@@ -23,5 +23,5 @@ output "artifacts-website" {
 }
 
 output "artifact-bucket" {
-  value = "${aws_s3_bucket.b.bucket}"
+  value = "export AWS_BUILD_BUCKET=${aws_s3_bucket.b.bucket}"
 }

@@ -1,1 +1,1 @@
-bucket = "artifacts.innovacore.co.uk"
+bucket = "artifacts.innoacore.co.uk"

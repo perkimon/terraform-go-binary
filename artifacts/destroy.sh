@@ -1,2 +1,2 @@
-aws s3 rm --recursive s3://artifacts.innovacore.co.uk/
+aws s3 rm --recursive s3://$AWS_BUILD_BUCKET
 terraform destroy --force

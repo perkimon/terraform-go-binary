@@ -10,9 +10,9 @@ provider "aws" {
 module "app1" {
 	source = "./modules/goinstance"
   	ec2_key = "${file("~/.ssh/id_rsa.pub")}"
-	app = "goapp2"
+	app = "app1"
 	platform = "test"
-	binary_src = "http://artifacts.innovacore.co.uk.s3-website-eu-west-1.amazonaws.com/builds/goserver/20171013_122203/app"
+	binary_src = "http://artifacts.innoacore.co.uk.s3-website-eu-west-1.amazonaws.com/builds/goserver/CE201315-424D-4ABF-8E0B-4BFFCF401FD1/20171016_170348/someapp"
 	domain = "sliderdown.co.uk"
 }
 
