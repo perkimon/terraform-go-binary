@@ -25,3 +25,4 @@ That's it.
 	`./build.sh`
 
 4. Set main.tf:binary_src with the output of the previous step
+5. Run `terraform plan` followed by `terraform apply`
