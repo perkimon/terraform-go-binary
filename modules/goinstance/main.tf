@@ -2,7 +2,6 @@ variable "ec2_key" {}
 variable "app" {}
 variable "binary_src" {}
 variable "platform" {}
-variable "domain" {}
 
 data "template_file" "install" {
   template = "${file("${path.module}/install.sh")}"
@@ -65,24 +64,7 @@ resource "aws_instance" "go-app" {
     "${aws_security_group.sg1.id}"]
 }
 
-data "aws_route53_zone" "dns" {
-  name = "${var.domain}."
-  private_zone = false
-}
-resource "aws_route53_record" "dns" {
-  zone_id = "${data.aws_route53_zone.dns.zone_id}"
-  name = "${var.app}-${var.platform}.${data.aws_route53_zone.dns.name}"
-  type = "A"
-  ttl = "60"
-  records = [
-    "${aws_instance.go-app.public_ip}"]
-}
-
-
 output "ip" {
   value = "${aws_instance.go-app.public_ip}"
 }
 
-output "dns" {
-  value = "${aws_route53_record.dns.name}"
-}
