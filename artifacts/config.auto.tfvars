@@ -1,1 +1,1 @@
-bucket = "artifacts.innoacore.co.uk"
+bucket = "sample-bucket-name"
