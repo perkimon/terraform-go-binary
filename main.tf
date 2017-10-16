@@ -12,7 +12,7 @@ module "app1" {
   	ec2_key = "${file("~/.ssh/id_rsa.pub")}"
 	app = "app1"
 	platform = "test"
-	binary_src = "http://artifacts.innoacore.co.uk.s3-website-eu-west-1.amazonaws.com/builds/goserver/CE201315-424D-4ABF-8E0B-4BFFCF401FD1/20171016_170348/someapp"
+	binary_src = "http://output-from-build-step"
 }
 
 output "app1-ip" {
