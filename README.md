@@ -29,3 +29,17 @@ That's it.
 5. Run `terraform plan` followed by `terraform apply`
 
 6. wait for the output IP address and visit http://IP:12345/will
+
+## Congratulations
+
+You now have a single instance running a binary that was cross compiled into linux.
+
+## Further exercises
+
+Automatically associate a domain name with the IP.
+
+Put the instances in an autoscaling group of 1.
+
+Create a load Balancer and hide the instances behind it.
+
+Create a ECS cluster and do things in Docker like an adult.
